@@ -24,4 +24,9 @@ function aumentaTamanho(){
 
  const LetrasMaiusculas =('ABCDEFGHIJKLMNOPQRSTUVXYWZ')
 
+ function geraSenha(){
+    let NumeroAleatorio = Math.random()+LetrasMaiusculas.length
+   console.log
+ }
+
  campoSenha.value = LetrasMaiusculas
