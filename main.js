@@ -53,14 +53,20 @@ for (i=0; i < checkbox.length;i++){
         numeroAleatorio = Math.floor(numeroAleatorio);
         senha = senha + alfabeto[numeroAleatorio];
     }
+
     campoSenha.value = senha;
-function classificaSenha(){
+    classificaSenha(alfabeto.length);
+}
+ }
+function classificaSenha(tamanhoAlfabeto){
+    let entropia = tamanhoSenha * Math.log2(alfabeto.length);
+    console.log(entropia);
     forcaSenha.classList.remove('fraca','media','forte');
-        if (tamanhoSenha > 11){
+        if (entropia > 11){
            forcaSenha.classList.add('forte');
-        } else if (tamanhoSenha > 5 && tamanhoSenha < 12) {
+        } else if (entropia > 5 && entropia < 12) {
             forcaSenha.classList.add('media');
-        } else if (tamanhoSenha <= 5){
+        } else if (entropia <= 5){
             forcaSenha.classList.add('fraca');
         }
 }   
