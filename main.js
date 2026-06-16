@@ -12,22 +12,27 @@ function diminuiTamanho(){
         tamanhoSenha--;
     }
     numeroSenha.textContent = tamanhoSenha
+    geraSenha();
 }
 function aumentaTamanho(){
     if (tamanhoSenha<50){
        // tamanhoSenha = tamanhoSenha+1;
         tamanhoSenha++;
+    
     }
     numeroSenha.textContent = tamanhoSenha;
+    geraSenha();
 }
  const campoSenha =document.querySelector('#campo-Senha');
 
  const LetrasMaiusculas =('ABCDEFGHIJKLMNOPQRSTUVXYWZ')
 
- function geraSenha(){
-    let NumeroAleatorio = Math.random()+LetrasMaiusculas.length
-        NumeroAleatorio = Math.floor(NumeroAleatorio);
-    console.log(NumeroAleatorio)
+ function geraSenha(){  
+    let senha ='';
+    for(let i = 0; i <tamanhoSenha;i++){
+        let NumeroAleatorio = Math.random()*LetrasMaiusculas.length
+        NumeroAleatorio = Math.floor(LetrasMaiusculas[NumeroAleatorio]);
+        senha = senha + LetrasMaiusculas[NumeroAleatorio];
+    }
+    campoSenha.value =senha;
  }
-
- campoSenha.value = LetrasMaiusculas
