@@ -24,10 +24,20 @@ function aumentaTamanho(){
     geraSenha();
 }
  const campoSenha =document.querySelector('#campo-Senha');
+const checkbox = document.querySelectorAll('.checkbox');
 
- const LetrasMaiusculas =('ABCDEFGHIJKLMNOPQRSTUVXYWZ')
+
+const LetrasMaiusculas =('ABCDEFGHIJKLMNOPQRSTUVXYWZ')
+const letrasMinusculas = 'abcdefghijklmnopqrstuvxywz';
+const numeros = '0123456789';
+const simbolos = '!@%*?$';
 
  function geraSenha(){  
+    let alfabeto = '';
+if (checkbox[0].checked){
+    alfabeto = alfabeto + LetrasMaiusculas;
+}
+console.log(alfabeto);
     let senha ='';
     for(let i = 0; i <tamanhoSenha;i++){
         let NumeroAleatorio = Math.random()*LetrasMaiusculas.length
