@@ -57,7 +57,7 @@ for (i=0; i < checkbox.length;i++){
     campoSenha.value = senha;
     classificaSenha(alfabeto.length);
 }
- }
+ 
 function classificaSenha(tamanhoAlfabeto){
     let entropia = tamanhoSenha * Math.log2(alfabeto.length);
     console.log(entropia);
