@@ -26,7 +26,8 @@ function aumentaTamanho(){
 
  function geraSenha(){
     let NumeroAleatorio = Math.random()+LetrasMaiusculas.length
-   console.log
+        NumeroAleatorio = Math.floor(NumeroAleatorio);
+    console.log(NumeroAleatorio)
  }
 
  campoSenha.value = LetrasMaiusculas
